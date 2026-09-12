@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yuseera & Aashique — Nikah Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.8), transparent 45%),
+    linear-gradient(135deg, #f7edda, #fffaf0, #ead9b8);
+  color: #5d472d;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+}
+
+/* MAIN CARD */
+
+.card {
+  width: min(94%, 760px);
+  margin: 25px auto;
+  padding: 48px 25px;
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #c7a96b;
+  border-radius: 22px;
+
+  background: rgba(255, 252, 242, .95);
+
+  box-shadow:
+    0 15px 45px rgba(100, 72, 35, .18);
+}
+
+/* CORNER DECORATION */
+
+.card::before,
+.card::after {
+  content: "❦";
+  position: absolute;
+  color: #b28a45;
+  font-size: 65px;
+  opacity: .35;
+}
+
+.card::before {
+  top: 8px;
+  left: 15px;
+}
+
+.card::after {
+  bottom: 8px;
+  right: 15px;
+  transform: rotate(180deg);
+}
+
+/* TOP TEXT */
+
+.top-line {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #80633d;
+}
+
+/* BISMILLAH */
+
+.bismillah {
+  margin: 20px 0 12px;
+  font-size: 28px;
+  color: #9a7437;
+}
+
+/* SMALL HEADING */
+
+.small-title {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #a27b3d;
+}
+
+/* INVITATION TEXT */
+
+.invite {
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* DIVIDER */
+
+.divider {
+  width: 75%;
+  height: 1px;
+  margin: 24px auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #bd9859,
+    transparent
+  );
+}
+
+/* ⭐ NEW BRIDE/GROOM FONT ⭐ */
+
+.name {
+  margin: 10px 0 12px;
+
+  font-family: "Allura", cursive;
+
+  font-size: clamp(58px, 14vw, 92px);
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: #a47732;
+
+  text-shadow:
+    1px 1px 1px rgba(120, 80, 20, .12);
+}
+
+/* FAMILY DETAILS */
+
+.family {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #6f5637;
+}
+
+/* STARS */
+
+.star {
+  color: #b18a4a;
+  font-size: 22px;
+  margin: 0 8px;
+}
+
+/* NIKAH */
+
+.nikah {
+  margin: 12px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  color: #79582d;
+}
+
+.with {
+  margin: 8px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+  font-style: italic;
+
+  color: #8b6938;
+}
+
+/* DATE */
+
+.date-box {
+  display: inline-block;
+
+  margin: 20px auto;
+  padding: 15px 28px;
+
+  border-top: 1px solid #c09a5a;
+  border-bottom: 1px solid #c09a5a;
+}
+
+.date {
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  color: #9a7132;
+}
+
+.time {
+  margin-top: 7px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+}
+
+/* VENUE */
+
+.venue-title {
+  margin-top: 28px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 17px;
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: #a27b3d;
+}
+
+.venue {
+  margin: 9px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+  font-weight: 700;
+
+  color: #79582d;
+
+  letter-spacing: 1px;
+}
+
+/* ADDRESS */
+
+.address {
+  margin: 10px auto;
+
+  max-width: 600px;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+
+  color: #705638;
+}
+
+/* MAP BUTTON */
+
+.map-button {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  padding: 12px 27px;
+
+  border-radius: 30px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #b28a45,
+    #8e682f
+  );
+
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 5px 15px rgba(120, 80, 20, .2);
+
+  transition: .3s;
+}
+
+.map-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(120, 80, 20, .3);
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 30px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  font-style: italic;
+
+  color: #9a7437;
+}
+
+.dua {
+  margin-top: 10px;
+
+  font-size: 17px;
+
+  color: #80633d;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .card {
+    padding: 38px 17px;
+  }
+
+  .top-line {
+    font-size: 16px;
+  }
+
+  .family {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 65px;
+  }
+
+  .nikah {
+    font-size: 25px;
+  }
+
+  .with {
+    font-size: 22px;
+  }
+
+  .date {
+    font-size: 23px;
+  }
+
+  .venue {
+    font-size: 25px;
+  }
+
+  .address {
+    font-size: 16px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="top-line">
+    Late Sharifa Bi Abdul Karim Shaikh's son,<br>
+    Janab Yusuf Abdul Karim Shaikh's granddaughter
+  </div>
+
+  <div class="bismillah">
+    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+  </div>
+
+  <div class="small-title">
+    Nikah Invitation
+  </div>
+
+  <div class="invite">
+    With the blessings of Allah, we invite you to the auspicious occasion of
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BRIDE -->
+
+  <div class="name">
+    ★ Yuseera ★
+  </div>
+
+  <div class="family">
+    Janab Ayyub Yusuf Shaikh's daughter,<br>
+    Nek Akhtar
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- NIKAH -->
+
+  <div class="nikah">
+    Ka Aqd Masood
+  </div>
+
+  <div class="with">
+    (The auspicious Nikah)
+  </div>
+
+  <div class="with">
+    with
+  </div>
+
+  <!-- GROOM -->
+
+  <div class="name">
+    ★ Ashique Ali ★
+  </div>
+
+  <div class="family">
+    Late Idris Shaikh's son
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DATE & TIME -->
+
+  <div class="date-box">
+
+    <div class="date">
+      Monday, 28 September
+    </div>
+
+    <div class="date">
+      2026
+    </div>
+
+    <div class="time">
+      After Namaz-e-Maghrib
+    </div>
+
+  </div>
+
+  <!-- VENUE -->
+
+  <div class="venue-title">
+    Venue
+  </div>
+
+  <div class="venue">
+    JAMBHULKAR GARDEN
+  </div>
+
+  <div class="address">
+    Sr. No. 6, 9, Opp. Vitthalrao Shivarkar Udyan,<br>
+    Vitthal Rao Shivarkar Rd,<br>
+    Opp. Mahatma Phule Sanskrutik Bhavan,<br>
+    Wanwadi, Pune, Maharashtra – 411040
+  </div>
+
+  <a
+    class="map-button"
+    href="https://www.google.com/maps/search/?api=1&query=Jambhulkar+Garden+Wanwadi+Pune"
+    target="_blank">
+
+    📍 View Location
+
+  </a>
+
+  <div class="footer">
+    With Love and Duas
+  </div>
+
+  <div class="dua">
+    May Allah bless this beautiful union with love,
+    happiness and barakah.
+  </div>
+
+</div>
+
+</body>
+</html>
